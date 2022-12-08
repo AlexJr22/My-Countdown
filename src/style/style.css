@@ -7,6 +7,7 @@
   font-family: 'League Spartan', sans-serif;
 }
 body {
+  background-color: rgb(33, 33, 45);
   display: flex;
   height: 100vh;
 
@@ -15,7 +16,8 @@ body {
 }
 
 #timer {
-  background-color: rgb(201, 221, 226);
+  background-color: rgb(100, 73, 100);
+  color: rgb(245, 222, 178);
   font-size: 6em;
   display: flex;
 
@@ -25,4 +27,6 @@ body {
   border-radius: 9px;
   justify-content: center;
   align-items: center;
+
+  box-shadow: 0 0 10px black;
 }
