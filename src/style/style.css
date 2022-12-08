@@ -15,7 +15,7 @@ body {
   align-items: center;
 }
 
-#timer {
+#clock {
   background-color: rgb(100, 73, 100);
   color: rgb(245, 222, 178);
   font-size: 6em;
