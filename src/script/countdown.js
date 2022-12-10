@@ -1,4 +1,3 @@
 import { Timer } from "./timer.js";
 
-Timer.clock.innerHTML = `Olá Mundo!!`;
-
+Timer.clock.innerHTML = `${Timer.minutes}:${Timer.secunds}`;
