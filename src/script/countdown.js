@@ -1,5 +1,4 @@
-import { Timer } from "./timer";
+import { Timer } from "./timer.js";
 
-const clock = document.getElementById('clock');
+Timer.clock.innerHTML = `Olá Mundo!!`;
 
-clock.innerHTML = `12:00`;
