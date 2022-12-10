@@ -1,25 +1,26 @@
 
 const Timer = {
   clock: document.getElementById('clock'),
-
-  Minutes: Number,
-  Secunds: Number,
+  timer: 0.1 * 60,
+  currentTime: 0,
+  interval: null,
 
   start() {
-    
-    setInterval(this.timer, 1000);
+    Timer.currentTime = Timer.timer;
 
+    Timer.interval = setInterval(Timer.countdown, 1000)
   },
 
-  timer(min=90 , sec=21) {
+  countdown() {
 
-    this.Minutes = min;
-    this.Secunds = sec;
-    
-    this.clock.innerHTML = `${Minutes}:${Secunds}`
-    console.log(this.Minutes, this.Secunds);
+    console.log(Timer.currentTime)
+    Timer.currentTime -= 1
+
+    if (Timer.currentTime === 0) {
+      clearInterval(Timer.interval)
+    }
   },
     
 }
-
+ 
 export { Timer };
