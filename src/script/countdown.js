@@ -1,3 +1,5 @@
 import { Timer } from "./timer.js";
 
-Timer.clock.innerHTML = `${Timer.minutes}:${Timer.secunds}`;
+const Clock = Timer.clock;
+
+Clock.innerHTML = `${Timer.minutes}:${Timer.secunds}`;
