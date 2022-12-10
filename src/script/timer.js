@@ -2,36 +2,22 @@
 const Timer = {
   clock: document.getElementById('clock'),
 
-  minutes: 60,
-  secunds: 20,
+  Minutes: Number,
+  Secunds: Number,
 
-  init(min=this.minutes, sec=this.secunds) {
-    setInterval(() => {
-      this.timer(min, sec);
-    }, 1000);
-  },
-  
-  timer(min, sec) {
+  start() {
     
-    console.log('Passou aqui!!')
+    setInterval(this.timer, 1000);
 
-      if (sec > 0 ) {
-        sec -= 1;
-        
-        if (sec == 0) {
-          min -= 1;
-          sec = 60;
-        };
+  },
 
-        
-      };
-      if (sec < 10) {
-        this.clock.innerHTML = `${min}:0${sec}`;
-      };
-      if (min < 10) {
-        this.clock.innerHTML = `0${min}:0${sec}`;
-      };
-      console.log('Passou aqui também!')
+  timer(min=90 , sec=21) {
+
+    this.Minutes = min;
+    this.Secunds = sec;
+    
+    this.clock.innerHTML = `${Minutes}:${Secunds}`
+    console.log(this.Minutes, this.Secunds);
   },
     
 }
