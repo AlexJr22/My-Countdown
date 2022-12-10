@@ -5,10 +5,9 @@ const Timer = {
   minutes: 60,
   secunds: 20,
 
-  myFunctionTest() {
-    console.log(this.secunds)
-    console.log(this.minutes)
-  },
+  init() {
+    
+  }
 }
 
 export { Timer };
