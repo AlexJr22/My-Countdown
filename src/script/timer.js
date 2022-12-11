@@ -1,7 +1,7 @@
 import { View } from "./View.js";
 
 const Timer = {
-  timer: 5,
+  timer: 7 * 60,
   currentTime: 0,
   interval: null,
 
