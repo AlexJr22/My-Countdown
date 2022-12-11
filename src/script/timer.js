@@ -1,22 +1,28 @@
+import { View } from "./View.js";
 
 const Timer = {
-  clock: document.getElementById('clock'),
   timer: 5,
   currentTime: 0,
   interval: null,
 
   start() {
     Timer.currentTime = Timer.timer;
+    Timer.interval = setInterval(Timer.countdown, 1000);
 
-    Timer.interval = setInterval(Timer.countdown, 1000)
+    View.render({
+      minutes: '09',
+      secunds: '18',
+    })
+    
   },
 
   countdown() {
 
     // console.log(Timer.currentTime);
     Timer.currentTime -= 1;
-    Timer.clock.innerHTML = Timer.currentTime;
 
+    View.render();
+    
     if (Timer.currentTime === 0) {
       clearInterval(Timer.interval);
       Timer.start();
