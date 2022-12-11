@@ -1,8 +1,8 @@
 const View = {
  
-  render() {
+  render({ minutes, secunds }) {
     document.body.innerHTML = `
-      <div id="clock"></div>
+      <div id="clock">${minutes}:${secunds}</div>
     `;
   },
   
