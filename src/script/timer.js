@@ -1,7 +1,7 @@
 
 const Timer = {
   clock: document.getElementById('clock'),
-  timer: 7 * 60,
+  timer: 5,
   currentTime: 0,
   interval: null,
 
@@ -14,12 +14,14 @@ const Timer = {
   countdown() {
 
     // console.log(Timer.currentTime);
-    Timer.clock.innerHTML = Timer.currentTime;
     Timer.currentTime -= 1;
+    Timer.clock.innerHTML = Timer.currentTime;
 
     if (Timer.currentTime === 0) {
       clearInterval(Timer.interval);
+      Timer.start();
     };
+
   },
     
 }
