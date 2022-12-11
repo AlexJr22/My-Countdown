@@ -9,10 +9,7 @@ const Timer = {
     Timer.currentTime = Timer.timer;
     Timer.interval = setInterval(Timer.countdown, 1000);
 
-    View.render({
-      minutes: '09',
-      secunds: '18',
-    })
+ 
     
   },
 
@@ -21,7 +18,10 @@ const Timer = {
     // console.log(Timer.currentTime);
     Timer.currentTime -= 1;
 
-    View.render();
+    View.render({
+      minutes: '09',
+      secunds: '18',
+    })
     
     if (Timer.currentTime === 0) {
       clearInterval(Timer.interval);
