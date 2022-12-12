@@ -1,12 +1,13 @@
 
 const Tempo = {
-  tempo: 7 * 60,
+  tempo: 0,
   interval: null,
 
   tempoEmMinutos: tempo => Math.floor(tempo / 60),
   tempoEmSegundos: tempo => tempo % 60,
 
   iniciar() {
+    Tempo.tempo = 7 * 60;
     Tempo.interval = setInterval(Tempo.cronometro, 1000);
   },
 
@@ -19,7 +20,6 @@ const Tempo = {
     if(Tempo.tempo === -1) {
       clearInterval(Tempo.interval);
       Tempo.iniciar();
-      Tempo.tempo = 5;
     };
 
   },
